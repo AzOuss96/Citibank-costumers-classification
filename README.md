@@ -244,3 +244,6 @@ knitr::kable(TestDT2, caption = "A Knitr table.") %>% kable_styling()
 
 # 5. Conclusion:
 In this project we performed a classification on a categorical data using multiple approaches. The SVM model seems to be the best candidate for this problem followed with KNN and Random Forest respectively. 
+=======
+# Citibank-costumers-classification
+
