@@ -20,6 +20,9 @@ library(kableExtra)
 source("Rscript.R")
 ```
 
+# Introduction 
+In this report, we compare several classification algorithms on a citibank' clients dataset. The aim of this project is to make a decent classification of Citibank's users ethnicity based on their bank account information. In the first section we perform some exploratory data analysis to understand the data. In the second part, we apply single learners algorithms. Finally, the third part is dedicated to using Ensemble methods to perform classification. We chose confusion matrices as a metric for performance comparaison.
+
 #1. Exploratory Data Analysis
 We look at the summary of the data :
 ```{r echo = FALSE,fig.align="center", message=FALSE, warning=FALSE,fig.height = 5, fig.width = 4}
@@ -110,6 +113,8 @@ multiplot(LDA_cfm,QDA_cfm,cols=2)
 On the left, the confusion matrix of LDA indicates an estimate true error of $43.1\%$ while the confusion matrix of QDA indicates an estimate true error of $51.1\%$.
 
 ## 2.2. Support Vector Machine
+
+
 We use the default settings for kernel for SVM, and a 10-fold cross validation to find the best values for the parameter $\gamma$ and the cost $c$. To serve this purpose, we make a grid search for the best $(c,\gamma)$ in the space $[0.1,15] \times [0.5,5]$.
 
 ```{r,echo = FALSE,fig.align="center", results='hide', message=FALSE, warning=FALSE, fig.height = 4, fig.width = 4}
